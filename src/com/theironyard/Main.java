@@ -44,6 +44,18 @@ public class Main {
             System.out.println(s);
         }
 
+        Cart myCart = new Cart("Krista");
+        sellItem(myCart, "car", 1);
+        System.out.println((myCart));
+
+        sellItem(myCart, "car", 1);
+        System.out.println((myCart));
+
+        sellItem(myCart, "car", 1);
+        sellItem(myCart, "computer", 3);
+        System.out.println((myCart));
+
+
     }
 
     public static int sellItem(Cart cart, String item, int quantity) {
