@@ -3,6 +3,7 @@ package com.theironyard;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeMap;
 
 public class Cart {
     private final String name;
@@ -11,7 +12,7 @@ public class Cart {
 
     public Cart(String name) {
         this.name = name;
-        this.list = new HashMap<>();
+        this.list = new TreeMap<>();
     }
 
     public int addToCart(StockItem item, int quantity) {
@@ -29,7 +30,7 @@ public class Cart {
 
     @Override
     public String toString() {
-        String s = "\nShopping cart " + name + " contains " + list.size() + " items\n";
+        String s = "\nShopping cart " + name + " contains " + list.size() + ((list.size() == 1) ? " item" : " items") + "\n";
         double totalCost = 0.0;
         for (Map.Entry<StockItem, Integer> item : list.entrySet()) {
             s = s + item.getKey() + ". " + item.getValue() + " purchased\n";

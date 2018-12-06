@@ -51,9 +51,19 @@ public class Main {
         sellItem(myCart, "car", 1);
         System.out.println((myCart));
 
-        sellItem(myCart, "car", 1);
+        if(sellItem(myCart, "car", 1) != 1) {
+            System.out.println("There are no more cars in stock");
+        }
+
         sellItem(myCart, "computer", 3);
         System.out.println((myCart));
+
+        sellItem(myCart, "juice", 4);
+        sellItem(myCart, "cup", 12);
+        sellItem(myCart, "bread", 1);
+        System.out.println(myCart);
+
+        System.out.println(stockList);
 
 
     }
