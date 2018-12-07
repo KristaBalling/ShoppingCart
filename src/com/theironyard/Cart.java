@@ -28,7 +28,7 @@ public class Cart {
         if((item != null) && (quantity > 0)) {
             //check if we already have the item in the cart
             int inCart = list.getOrDefault(item, 0);
-            int newQuantity = inCart + quantity;
+            int newQuantity = inCart - quantity;
 
             if(newQuantity > 0) {
                 list.put(item, newQuantity);
@@ -39,6 +39,10 @@ public class Cart {
             }
         }
         return 0;
+    }
+
+    public void clearCart() {
+        this.list.clear();
     }
 
     public Map<StockItem, Integer> Items() {

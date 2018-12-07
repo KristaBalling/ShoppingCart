@@ -90,7 +90,7 @@ public class StockItem implements Comparable<StockItem> {
 
     @Override
     public int compareTo(StockItem o) {
-        System.out.println("entering StockItem.compareTo");
+//        System.out.println("entering StockItem.compareTo");
         if (this == o) {
             return 0;
         }
@@ -103,6 +103,6 @@ public class StockItem implements Comparable<StockItem> {
 
     @Override
     public String toString() {
-        return this.name + " : price " + this.price;
+        return this.name + " : price " + this.price + ". Reserved: " + this.reserved;
     }
 }

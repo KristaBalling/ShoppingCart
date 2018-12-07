@@ -9,9 +9,8 @@ public class StockList {
     private final Map<String, StockItem> list;
 
     public StockList() {
-        this.list = new HashMap<>();
+        this.list = new LinkedHashMap<>();
     }
-
 
     public int addStock(StockItem item) {
         if(item != null) {
@@ -71,6 +70,7 @@ public class StockList {
         }
         return Collections.unmodifiableMap(prices);
     }
+
     public Map<String, StockItem> Items(){
         return Collections.unmodifiableMap(list);
     }
